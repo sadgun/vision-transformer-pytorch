@@ -1,0 +1,30 @@
+# Vision Transformer Configuration File
+# This file contains all hyperparameters and settings for the Vision Transformer model
+
+# Dataset configuration
+dataset:
+  num_classes: 10  # Number of classes in MNIST dataset
+  num_channels: 1  # Grayscale images (1 channel)
+  img_size: 28  # MNIST image size (28x28)
+  data_root: "./data"  # Directory to store/download dataset
+
+# Model architecture hyperparameters
+model:
+  patch_size: 7  # Size of each patch (7x7)
+  embed_dim: 64  # Embedding dimension
+  attention_heads: 4  # Number of attention heads in multi-head attention
+  transformer_blocks: 4  # Number of transformer encoder blocks
+  mlp_hidden_nodes: 128  # Hidden layer size in MLP
+
+# Training hyperparameters
+training:
+  batch_size: 64  # Batch size for training and validation
+  learning_rate: 0.001  # Learning rate for optimizer
+  epochs: 5  # Number of training epochs
+  log_interval: 100  # Interval for logging training progress (in batches)
+  shuffle_train: true  # Whether to shuffle training data
+  shuffle_val: true  # Whether to shuffle validation data
+
+# Device configuration
+device:
+  use_cuda: true  # Whether to use CUDA if available

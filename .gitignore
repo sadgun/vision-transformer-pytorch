@@ -219,7 +219,6 @@ __marimo__/
 *.ipynb
 
 # Data
-data/
 *.pth
 *.pt
 *.ckpt
